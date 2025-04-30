@@ -1,0 +1,53 @@
+'''
+How to Create Array & print it? 
+#way1:'import numpy' & call numpy.array() method. required parameter in its method is 1.
+       but it has more than 4 optionls parametes, 
+       ex- numpy.array(object,dtype=None, copy=True,order='K', subok =False, ndmin=0)
+       This is powerful
+Note:There are several other ways to create arrays with numpy depending on what kind of array you want.
+using these methods - nrange(), linespace(), zeros()  ,ones(), empty(), reshape(), formfunction() etc.
+with numpy, we can form 1d,2d,3d....nd array
+
+1d-array- A simple list of values, 2d array using row & col- matrix , 3d array(matrix of matrices)- stack of 2d array
+       
+#way2:'import array' & call array.array() method. required parameter in its method is 2.
+       parameters: typecode(string code 'i' for int, 'f' for float) 
+                   initializer(list,tuple, or any iterable)
+       This is lightweight, limited
+'''
+
+#1.Using NumPy module(for real-time)
+import numpy as np
+#np.array=[1.2,3.4,6.7] # X can't write this'
+arr1= np.array([1.2, 3.4, 6.7] )
+print(type(arr1)) #<class 'numpy.ndarray'>
+
+#For 2D-array
+arr2=np.array([[2,3], [4,5], [5,6]])
+print(arr2)
+'''
+[[2 3]
+ [4 5]
+ [5 6]]
+'''
+print(arr2.shape) # (3,2)
+#Using array module(for simple fixed-type)
+import array
+arr = array.array('i', [1,2,3])
+print(arr)  # array('i', [1, 2, 3])
+for item in arr:
+    print(type(item), end=" ")
+print(type(arr.tolist())) # but type is a list [1,2,3]
+'''
+When use float32 (use 4 bytes)?
+Faster on GPUs & some CPUs(especially in ML, games, real-time apps).
+Use less memory ,so better for large datasets or real-time streaming.
+Example-Sensor data in Robotics, image pixels, audio streams.
+
+When use float64 (use 8 bytes)?
+Good for scientific calculations, financial models, etc.
+
+*Real-time apps or large dataset -> use float32
+*Scientific/high-accuracy tasks ->  use float64(NumPy by default)
+
+'''
