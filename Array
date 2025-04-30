@@ -18,7 +18,7 @@ with numpy, we can form 1d,2d,3d....nd array
 
 #1.Using NumPy module(for real-time)
 import numpy as np
-#np.array=[1.2,3.4,6.7] # X can't write this'
+#np.array=[1.2,3.4,6.7] # X can't write this bcs this will create list data structure, here want to create array not list'
 arr1= np.array([1.2, 3.4, 6.7] )
 print(type(arr1)) #<class 'numpy.ndarray'>
 
