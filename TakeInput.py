@@ -15,19 +15,21 @@ This line is a concise way to take multiple space-separated integer inputs from 
   Ex- input: 4 5 6 | output: 4 5 6(as integers)
 '''
 #------------------
-a=input() #input: hi hello , output: hi hello
-b=input().split() #input hi hello , output: ['hi], 'hello']
-print(a)
-print(b)
-#------------------
+#Example1
+a=input() #input: hi hello 
+print(a)  #output: hi hello
+
+#Example2
+b=input().split() #input: hi hello 
+print(b) #output: ['input' 'hi' 'hello']
+
+#Example3
 a,b,c =  map(int, input().split())
 print(a,b,c) # input: 4 5 6 , output: 4 5 6 
 
 # input: 4 5 6 , output: a = 4 b = 5 c = 6  in all 3 ways to print
 print('a =',a,  'b =',b, 'c =',c)  # using commas
-
 print('a = ' +str(a)+ ' b = '+str(b)+ ' c = ' +str(c))   #string concatenation using '+'
-
 print(f"a = {a} b = {b} c = {c} ") # using f-string
 #--------------------------------------
 #Note: THe best approach to print is f-string, coz it is clear, readable,flexible.
